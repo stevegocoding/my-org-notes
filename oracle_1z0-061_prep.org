@@ -1,0 +1,82 @@
+* Oracle 1Z0-061 Exam Preparation
+** Reporting Aggregated Data Using the Group Functions
+*** Group Functions Concepts
+
+Group functions may be defined using the following formula:
+F(g1, g2, g3 ..., gn) = result1, result2, result3 ..., resultn;
+
+SELECT group_function(column or expression), ...
+FROM table [WHERE ...] [ORDER BY ...]
+
+if there is only ONE group, all the rows of the table  (without using GROUP BY clause), then only
+ONE result is returned.
+
+**** Types and Syntax
+
+***** COUNT function
+COUNT({* | { DISTINCT | ALL} | expr});
+1. COUNT(*)
+   All rows in each group, including those with NULL and duplicated
+   values are counted.
+
+2. COUNT(DISTINCT expr)
+   Only unique occurrences of expr are counted.
+
+3. COUNT(ALL expr)
+   ALL is part of default syntax, COUNT(ALL expr) == COUNT(expr)
+   All rows with non-NULL values in each group are counted.
+
+expr can be NUMBER, DATE, CHAR or VARCHAR2
+if expr is NULL, it is ignored UNLESS it is managed by NVL, NVL2 or
+COALESCE.
+
+***** AVG function
+AVG([DISTINCT|ALL] | expr)
+
+1. AVG(DISTINCT expr)
+Sum of distinct values of expr / unique occurrences of expr
+
+2. AVG(ALL expr) and AVG(expr)
+   Include non-NULL values to the sum and non-NULL rows
+
+expr is NUMBER type.
+
+***** SUM function
+returns the aggregated total of the non-NULL numeric expression values
+in the group
+
+SUM([DISTINCT|ALL] expr)
+
+1. SUM(DISTINCT expr)
+2. SUM(ALL expr)
+3. SUM(expr)
+
+expr is NUMER type.
+
+***** MAX and MIN functions
+
+***** STDDEV function
+
+***** VARIANCE function
+
+**** 知识点总结
+1. Group functions 总是在一个group of rows上执行一次, 一个group可能是
+   segments也可能是整个表
+2. 有NULL的row在group里是被忽略的( 除了COUNT(*) ) , 除非使用 NVL, NVL2 or COALESCE处理
+   这些NULL值
+
+*** Identify the Available Group Functions (examples)
+
+*** Group Data Using the GROUP BY Caluse
+
+GROUP BY clause creates groups where  group functions applied.
+
+
+
+
+
+
+
+
+*** Group Dataj Using GROUP BY Clause
+*** Include or Exclude Grouped Rows Using the HAVING Clause
