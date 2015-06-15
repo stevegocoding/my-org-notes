@@ -2,9 +2,12 @@
 
 
 ** Relational Theory
+
+*** Three Pillars
 + selection
 + projection
 + joining
+
 
 ** Reporting Aggregated Data Using the Group Functions
 *** Group Functions Concepts
@@ -129,5 +132,239 @@ HAVING count (*) > 1
 
 
 ** Displaying Data from Multiple Tables
+
+*** Types of JOINs
+
+**** Equijoin and Nonequijoin (how to determine if matched!)
+
+**** Inner Join (Only include matched results)
+Three clauses (mutual exclusive, what columns to match):
++ NATURAL JOIN: join based on all identical columns implicitly
++ USING: join based on specified unqualified columns 
++ ON: join based specified qualified columns
+
+***** Natural JOIN
+
+desc regions
+Name        Null     Type         
+----------- -------- ------------ 
+REGION_ID   NOT NULL NUMBER       
+REGION_NAME          VARCHAR2(25) 
+
+desc countries
+Name         Null     Type         
+------------ -------- ------------ 
+COUNTRY_ID   NOT NULL CHAR(2)      
+COUNTRY_NAME          VARCHAR2(40) 
+REGION_ID             NUMBER 
+
+#+BEGIN_SRC sql
+select regions.REGION_NAME, countries.COUNTRY_NAME
+from countries
+natural join regions;
+#+END_SRC
+
+***** JOIN ... USING
+Sometimes we wanna controll which columns to use for joins.
+#+BEGIN_SRC sql
+SELECT country_name
+FROM countries
+JOIN regions
+ON (countries.region_id=regions.region_id)
+WHERE region_name='Americas';
+#+END_SRC
+
+***** JOIN ... ON
+Explicitly qualify the columns with table name, more general and
+widely used format.
+
+**** Outer Join (Include nonmatching column values in result)
+***** Left Outer Join
+***** Right Outer Join
+***** Full Outer Join
+
+**** Cross Join (No matching is performed => Cartesian Product)
+
+*** Oracle Traditional Join Syntax
+
+**** Inner join
+#+BEGIN_SRC sql
+SELECT regions.region_name, countries.country_name
+           FROM regions, countries
+           WHERE regions.region_id=countries.region_id;
+#+END_SRC
+
+**** Outer join
+This is a RIGHT outer join (departments is the target)
+#+BEGIN_SRC sql
+SELECT last_name, department_name
+           FROM employees, departments
+           WHERE employees.department_id (+) = departments.department_id;
+#+END_SRC
+
+**** Cross join
+#+BEGIN_SRC sql
+SELECT * FROM regions,countries;
+#+END_SRC
+
+*** Self Join
+Hierachical relationships between rows of a table.
+
+*** Outer Join
+
+
+** Subquery
+
+*** Definition
+A subquery is a query that is nested inside a SELECT, INSERT, UPDATE,
+or DELETE statement or inside another subquery.
+
+A scalar subquery is a query that returns exactly one value: a single
+row, with a single column. 
+
+A subquery returns more than one row, one of the operators IN, NOT IN, ANY and
+ALL must be used.
+
+The places in a query where a subquery may be used are as follows: 
++ In the SELECT list used for column projection
++ In the FROM clause
++ In the WHERE clause
++ In the HAVING clause
+
+*** Star Transformation
+#+BEGIN_SRC sql
+SELECT count(quantity_sold)
+FROM sales s, products p, customers c, channels ch
+WHERE s.prod_id=p.prod_id
+AND s.cust_id=c.cust_id
+AND s.channel_id=ch.channel_id
+AND p.prod_name='Comic Book Heroes'
+AND c.cust_city='Oxford'
+AND ch.channel_desc='Internet';
+#+END_SRC
+
+=>
+
+#+BEGIN_SRC sql
+SELECT count(quantity_sold)
+FROM sales
+WHERE prod_id IN
+  (SELECT prod_id
+   FROM products
+   WHERE prod_name='Comic Book Heroes')
+AND cust_id IN
+  (SELECT cust_id
+   FROM customers
+   WHERE cust_city='Oxford')
+AND channel_id IN
+  (SELECT channel_id
+   FROM channels
+   WHERE channel_desc='Internet');
+#+END_SRC
+
+*** SELECT FROM a subquery
+Generate a table (inline view) from which to SELECT
+#+BEGIN_SRC sql
+SELECT avg(salary),country_id
+FROM (SELECT salary, country_id
+        FROM employees 
+        NATURAL JOIN departments
+        NATURAL JOIN locations)
+GROUP BY country_id;
+#+END_SRC
+
+*** SELECT a subquery
+Generate values for projection
+#+BEGIN_SRC sql
+SELECT (SELECT max(salary) FROM employees) *
+       (SELECT max(commission_pct) FROM employees) / 100
+FROM dual; 
+#+END_SRC
+
+*** Subquery for DML statement
+#+BEGIN_SRC sql
+INSERT INTO sales_hist
+  SELECT *
+  FROM sales
+  WHERE date > sysdate-1;
+
+UPDATE employees
+SET salary = (SELECT avg(salary)
+              FROM employees);
+
+DELETE FROM departments
+                WHERE department_id NOT IN
+                (SELECT department_id
+                 FROM employees
+                 WHERE department_id is not null);
+#+END_SRC
+Subquery CANNOT be used in VALUES clause of INSERT statement.
+
+*** Types of subqueries
+
+** Using the Set Operators
+
+** Manipulating Data
+
+** Using DDL Statement to Create and Manage Tables
+
+*** Main Database Objects
+
++ Tables
++ Views - a stored SELECT statement that can be used as a table
++ Synonyms - a alias for a table (or a view)
++ Indexes
++ Sequences
+
+*** Users and Schemas
+
+In Oracle environment, user <=> schema
+A schema is a container for the objects owned by a user. When a user
+is created, their schema is created too.
+
+*** Constrains
++ UNIQUE
++ NOT NULL
++ PRIMARY KEY
++ FOREIGN KEY
++ CHECK
+
+**** UNIQUE
+A unique constraint nominates a column or a set of columns for whcich
+value MUST be different for every row in the table. The value of the
+columns COULD be NULL.
+
+single column => key
+multiple columns => composite key
+
+Unique constraints are enforced by an index. When a constraint
+constraint is defined, Oracle will look for an index on the key
+column(s), if one doesn't exist it will be cretated. When insert a new
+row, Oracle will search the index to see if the values of the key
+columns are already present.
+
+The structure of these indexes (known as B*Tree indexes) does not
+include NULL values, which is why many rows with NULL are permitted:
+they simply do not exist in the index. 
+
+Index => 
+enforce the UNIQUE constraint
+improve the performance if the key columns are used in WHERE
+
+However, selecting WHERE key_columns IS NULL will result in a
+full-table scan because index doesn't include NULLs
+
+**** NOT NULL
+
+**** PRIMARY KEY
+
+The primary key is the means of locating a single row in a table.
+Oracle permits table without primary keys but not a good practice.
+
+In effect, primary key == (unique) union (not null)
+
+One table, one primary key.
+
+**** FOREIGN KEY
 
 
