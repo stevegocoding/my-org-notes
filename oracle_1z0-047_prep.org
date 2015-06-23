@@ -1,0 +1,25 @@
+* ORACLE 047 Exam Preparation
+
+** Overview
+| Number | Exam Objectives                               | Notes |
+|--------+-----------------------------------------------+-------|
+|    1.0 | Retriving Data Using the SQL SELECT Statement |       |
+|--------+-----------------------------------------------+-------|
+|    1.1 | List the capabilities of SELECT statement     |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
+|        |                                               |       |
