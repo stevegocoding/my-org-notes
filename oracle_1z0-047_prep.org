@@ -1,25 +1,203 @@
-* ORACLE 047 Exam Preparation
+* Self Test Answers
 
-** Overview
-| Number | Exam Objectives                               | Notes |
-|--------+-----------------------------------------------+-------|
-|    1.0 | Retriving Data Using the SQL SELECT Statement |       |
-|--------+-----------------------------------------------+-------|
-|    1.1 | List the capabilities of SELECT statement     |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
-|        |                                               |       |
+| Ch 4 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|    5 | ABC |                                                        |
+|    6 | AD  |                                                        |
+|    7 | B   |                                                        |
+|    8 | A   | C                                                      |
+|    9 | B   | C                                                      |
+|   10 | D   |                                                        |
+|   11 | B   |                                                        |
+|   12 | B   |                                                        |
+|   13 | D   |                                                        |
+|   14 | A   |                                                        |
+|   15 | A   |                                                        |
+|------+-----+--------------------------------------------------------|
+|  Ch5 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|    1 | D   |                                                        |
+|    2 | A   | C                                                      |
+|    3 | B   | C                                                      |
+|      |     | "^=" means "not equal"                                 |
+|    4 | BC  | CD                                                     |
+|      |     | NOT is evaluted first, then AND, and then OR           |
+|    5 | B   |                                                        |
+|    6 | A   |                                                        |
+|    7 | A   | D                                                      |
+|      |     | IN operator is inclusive.                              |
+|      |     | 200 IN ('100', '855') => implicit data type conversion |
+|      |     | LIKE 'Codd_%' => unserscore is single-char             |
+|    8 | A   | D                                                      |
+|    9 | A   |                                                        |
+|   10 | B   |                                                        |
+|   11 | C   |                                                        |
+|   12 | AD  | AC                                                     |
+|   13 | D   | B                                                      |
+|   14 | C   |                                                        |
+|   15 | B   |                                                        |
+|------+-----+--------------------------------------------------------|
+|  Ch6 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|    1 | C   |                                                        |
+|    2 | C   |                                                        |
+|    3 | B   | ACD                                                    |
+|    4 | C   | A                                                      |
+|    5 | B   | A                                                      |
+|    6 |     | C                                                      |
+|    7 | A   | C                                                      |
+|    8 | B   |                                                        |
+|    9 | D   | C                                                      |
+|   10 | B   |                                                        |
+|   11 |     | A                                                      |
+|   12 | C   | B                                                      |
+|   13 |     | A                                                      |
+|   14 | B   |                                                        |
+|   15 |     | A                                                      |
+|------+-----+--------------------------------------------------------|
+|  Ch7 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|    1 | AC  | AB                                                     |
+|    2 | B   |                                                        |
+|    3 | AB  |                                                        |
+|    4 | B   |                                                        |
+|    5 | D   |                                                        |
+|    6 | D   | C                                                      |
+|    7 |     | A                                                      |
+|    8 |     | ABCD                                                   |
+|    9 | AD  | BD                                                     |
+|      |     | No HAVING clause in an INSERT statement                |
+|      |     | No expression list in a DELETE statement               |
+|   10 | A   |                                                        |
+|   11 | C   |                                                        |
+|   12 | A   | D                                                      |
+|   13 | BD  | AC                                                     |
+|      |     | HAVING in only valid in the SELECT statement           |
+|      |     | must occur after the WHERE statement                   |
+|   14 | C   |                                                        |
+|   15 | A   |                                                        |
+|------+-----+--------------------------------------------------------|
+|  Ch8 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|    1 | AC  |                                                        |
+|    2 | BD  |                                                        |
+|    3 | B   |                                                        |
+|    4 | A   |                                                        |
+|    5 | AD  |                                                        |
+|    6 | CD  |                                                        |
+|    7 | BD  |                                                        |
+|    8 | BC  |                                                        |
+|    9 | A   | C                                                      |
+|   10 | B   |                                                        |
+|   11 | AC  | BC                                                     |
+|   12 | AC  | ACD                                                    |
+|   13 | C   |                                                        |
+|   14 | A   | B                                                      |
+|   15 | D   | A                                                      |
+|------+-----+--------------------------------------------------------|
+|  Ch9 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|    1 | A   |                                                        |
+|    2 | ABC | B                                                      |
+|    3 | BD  |                                                        |
+|    4 | B   |                                                        |
+|    5 | BD  |                                                        |
+|    6 | A   |                                                        |
+|    7 | D   | C                                                      |
+|    8 | D   |                                                        |
+|    9 | C   | AC                                                     |
+|   10 | D   |                                                        |
+|   11 | BCD | ABC                                                    |
+|      |     |                                                        |
+|      |     |                                                        |
+|      |     |                                                        |
+|      |     |                                                        |
+|   12 | D   | A                                                      |
+|   13 |     | D                                                      |
+|   14 | D   | A                                                      |
+|   15 | AB  |                                                        |
+|------+-----+--------------------------------------------------------|
+| Ch10 |     |                                                        |
+|------+-----+--------------------------------------------------------|
+|       |     |                                                        |
+
+
+** Notes for Exam
+
+*** Chapter 6: Using Single-Row functions
+
+
+*** Chapter 7: Reporting Aggregated Data Using the Group Functions
+
+**** Use of Group Functions
+
++ Aggregate functions can be called from 4 places in a SELECT
+  statement: select list, ORDER BY clause, GROUP BY clause and HAVING
+  clause; they do not exist in other SQL statement.
+
++ COUNT only counts non-NULL values and ignore NULL values.
+
++ COUNT(*) will count all rows, even there is NULL values in that
+  row.
+
++ COUNT(DISTINCT last_name) => no duplicates, COUNT(ALL last_name) =>
+  with duplicates. They CANNOT be used with the asterisk.
+
++ MIN/MAX can work with numeric, date and character data, same basic
+  logic that ORDER BY uses for the different datatypes: '2' > '10'
+
++ AVG only works with numeric data, it ignors NULL values.
+
++ AVG can be used with DISTINCT and ALL
+
++ MEDIAN ignores NULL value.
+
++ RANK(c1, c2, c3) WITHIN GROUP (ORDER BY e1, e2, e3): c1 should match
+  the datatype of e1, c2 should match the datatype of e2 ...
+
+**** Group Data by Using the GROUP BY Clause
+
++ GROUP BY can specify any number of valid expressions, including
+  columns of the table
+
++ With GROUP BY clause, the only items allowed in the select list of
+  a SELECT are: 
+  + expressions specified by the GROUP BY
+  + aggregate functions
+
++ Expressions that are specified in the GROUP BY do not have to be
+  included in the SELECT statement’s select list.
+
+**** Filter Grouped rows by Using the HAVING clause
+
+*** Chapter 8: Display Data from Multiple Tables
+*** Chapter 9: Subquery
+
++ Subqueries can be used in SELECT, INSERT, UPDATE, DELETE and CREATE
+  TABLE or CREATE VIEW.
++ Subquery can be used in WHERE clauses of SELECT, UPDATE and
+  DELETE, in the UPDATE ... SET clause and INSERT list of values.
++ Subquery is a SELECT statement that may return one or more columns
+  in one or more rows, multi-rows subquery must be used with IN, NOT
+  IN, ANY and ALL.
++ Correlated subqueries can be used in SELECT, UPDATE and DELETE
+  statement.
++ Scalar subquery expressions CANNOT be used in the following
+  locations:
+  + in CHECK constraint
+  + in GROUP BY clauses
+  + in HAVING clauses
+  + in a function-based index
+  + as a DEFAULT clause of any DML statement
+  + in the WHEN conditions of CASE
+  + in the START WITH and CONNECT BY clauses
++ Correlated subquery: 
+  + each row, execute parent query and then subquery. Parent query
+    drives correlated subquery.
+  + Correlated subquery in UPDATE and DELETE clauses
+    + in SET and WHERE clauses
++ EXIST keyword: tests for the existence of any rows in a subquery.
++ WITH clause: assign a name to a subquery block (internally a
+  temporary table or inline view).
+
+*** Chapter 10: Creating Ohter Schema Objects
