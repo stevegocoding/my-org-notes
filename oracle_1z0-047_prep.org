@@ -1,125 +1,185 @@
 * Self Test Answers
 
-| Ch 4 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|    5 | ABC |                                                        |
-|    6 | AD  |                                                        |
-|    7 | B   |                                                        |
-|    8 | A   | C                                                      |
-|    9 | B   | C                                                      |
-|   10 | D   |                                                        |
-|   11 | B   |                                                        |
-|   12 | B   |                                                        |
-|   13 | D   |                                                        |
-|   14 | A   |                                                        |
-|   15 | A   |                                                        |
-|------+-----+--------------------------------------------------------|
-|  Ch5 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|    1 | D   |                                                        |
-|    2 | A   | C                                                      |
-|    3 | B   | C                                                      |
-|      |     | "^=" means "not equal"                                 |
-|    4 | BC  | CD                                                     |
-|      |     | NOT is evaluted first, then AND, and then OR           |
-|    5 | B   |                                                        |
-|    6 | A   |                                                        |
-|    7 | A   | D                                                      |
-|      |     | IN operator is inclusive.                              |
-|      |     | 200 IN ('100', '855') => implicit data type conversion |
-|      |     | LIKE 'Codd_%' => unserscore is single-char             |
-|    8 | A   | D                                                      |
-|    9 | A   |                                                        |
-|   10 | B   |                                                        |
-|   11 | C   |                                                        |
-|   12 | AD  | AC                                                     |
-|   13 | D   | B                                                      |
-|   14 | C   |                                                        |
-|   15 | B   |                                                        |
-|------+-----+--------------------------------------------------------|
-|  Ch6 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|    1 | C   |                                                        |
-|    2 | C   |                                                        |
-|    3 | B   | ACD                                                    |
-|    4 | C   | A                                                      |
-|    5 | B   | A                                                      |
-|    6 |     | C                                                      |
-|    7 | A   | C                                                      |
-|    8 | B   |                                                        |
-|    9 | D   | C                                                      |
-|   10 | B   |                                                        |
-|   11 |     | A                                                      |
-|   12 | C   | B                                                      |
-|   13 |     | A                                                      |
-|   14 | B   |                                                        |
-|   15 |     | A                                                      |
-|------+-----+--------------------------------------------------------|
-|  Ch7 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|    1 | AC  | AB                                                     |
-|    2 | B   |                                                        |
-|    3 | AB  |                                                        |
-|    4 | B   |                                                        |
-|    5 | D   |                                                        |
-|    6 | D   | C                                                      |
-|    7 |     | A                                                      |
-|    8 |     | ABCD                                                   |
-|    9 | AD  | BD                                                     |
-|      |     | No HAVING clause in an INSERT statement                |
-|      |     | No expression list in a DELETE statement               |
-|   10 | A   |                                                        |
-|   11 | C   |                                                        |
-|   12 | A   | D                                                      |
-|   13 | BD  | AC                                                     |
-|      |     | HAVING in only valid in the SELECT statement           |
-|      |     | must occur after the WHERE statement                   |
-|   14 | C   |                                                        |
-|   15 | A   |                                                        |
-|------+-----+--------------------------------------------------------|
-|  Ch8 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|    1 | AC  |                                                        |
-|    2 | BD  |                                                        |
-|    3 | B   |                                                        |
-|    4 | A   |                                                        |
-|    5 | AD  |                                                        |
-|    6 | CD  |                                                        |
-|    7 | BD  |                                                        |
-|    8 | BC  |                                                        |
-|    9 | A   | C                                                      |
-|   10 | B   |                                                        |
-|   11 | AC  | BC                                                     |
-|   12 | AC  | ACD                                                    |
-|   13 | C   |                                                        |
-|   14 | A   | B                                                      |
-|   15 | D   | A                                                      |
-|------+-----+--------------------------------------------------------|
-|  Ch9 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|    1 | A   |                                                        |
-|    2 | ABC | B                                                      |
-|    3 | BD  |                                                        |
-|    4 | B   |                                                        |
-|    5 | BD  |                                                        |
-|    6 | A   |                                                        |
-|    7 | D   | C                                                      |
-|    8 | D   |                                                        |
-|    9 | C   | AC                                                     |
-|   10 | D   |                                                        |
-|   11 | BCD | ABC                                                    |
-|      |     |                                                        |
-|      |     |                                                        |
-|      |     |                                                        |
-|      |     |                                                        |
-|   12 | D   | A                                                      |
-|   13 |     | D                                                      |
-|   14 | D   | A                                                      |
-|   15 | AB  |                                                        |
-|------+-----+--------------------------------------------------------|
-| Ch10 |     |                                                        |
-|------+-----+--------------------------------------------------------|
-|       |     |                                                        |
+| Ch 4 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    5 | ABC  |                                                                                                                        |
+|    6 | AD   |                                                                                                                        |
+|    7 | B    |                                                                                                                        |
+|    8 | A    | C                                                                                                                      |
+|    9 | B    | C                                                                                                                      |
+|   10 | D    |                                                                                                                        |
+|   11 | B    |                                                                                                                        |
+|   12 | B    |                                                                                                                        |
+|   13 | D    |                                                                                                                        |
+|   14 | A    |                                                                                                                        |
+|   15 | A    |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|  Ch5 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | D    |                                                                                                                        |
+|    2 | A    | C                                                                                                                      |
+|    3 | B    | C                                                                                                                      |
+|      |      | "^=" means "not equal"                                                                                                 |
+|    4 | BC   | CD                                                                                                                     |
+|      |      | NOT is evaluted first, then AND, and then OR                                                                           |
+|    5 | B    |                                                                                                                        |
+|    6 | A    |                                                                                                                        |
+|    7 | A    | D                                                                                                                      |
+|      |      | IN operator is inclusive.                                                                                              |
+|      |      | 200 IN ('100', '855') => implicit data type conversion                                                                 |
+|      |      | LIKE 'Codd_%' => unserscore is single-char                                                                             |
+|    8 | A    | D                                                                                                                      |
+|    9 | A    |                                                                                                                        |
+|   10 | B    |                                                                                                                        |
+|   11 | C    |                                                                                                                        |
+|   12 | AD   | AC                                                                                                                     |
+|   13 | D    | B                                                                                                                      |
+|   14 | C    |                                                                                                                        |
+|   15 | B    |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|  Ch6 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | C    |                                                                                                                        |
+|    2 | C    |                                                                                                                        |
+|    3 | B    | ACD                                                                                                                    |
+|    4 | C    | A                                                                                                                      |
+|    5 | B    | A                                                                                                                      |
+|    6 |      | C                                                                                                                      |
+|    7 | A    | C                                                                                                                      |
+|    8 | B    |                                                                                                                        |
+|    9 | D    | C                                                                                                                      |
+|   10 | B    |                                                                                                                        |
+|   11 |      | A                                                                                                                      |
+|   12 | C    | B                                                                                                                      |
+|   13 |      | A                                                                                                                      |
+|   14 | B    |                                                                                                                        |
+|   15 |      | A                                                                                                                      |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|  Ch7 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | AC   | AB                                                                                                                     |
+|    2 | B    |                                                                                                                        |
+|    3 | AB   |                                                                                                                        |
+|    4 | B    |                                                                                                                        |
+|    5 | D    |                                                                                                                        |
+|    6 | D    | C                                                                                                                      |
+|    7 |      | A                                                                                                                      |
+|    8 |      | ABCD                                                                                                                   |
+|    9 | AD   | BD                                                                                                                     |
+|      |      | No HAVING clause in an INSERT statement                                                                                |
+|      |      | No expression list in a DELETE statement                                                                               |
+|   10 | A    |                                                                                                                        |
+|   11 | C    |                                                                                                                        |
+|   12 | A    | D                                                                                                                      |
+|   13 | BD   | AC                                                                                                                     |
+|      |      | HAVING in only valid in the SELECT statement                                                                           |
+|      |      | must occur after the WHERE statement                                                                                   |
+|   14 | C    |                                                                                                                        |
+|   15 | A    |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|  Ch8 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | AC   |                                                                                                                        |
+|    2 | BD   |                                                                                                                        |
+|    3 | B    |                                                                                                                        |
+|    4 | A    |                                                                                                                        |
+|    5 | AD   |                                                                                                                        |
+|    6 | CD   |                                                                                                                        |
+|    7 | BD   |                                                                                                                        |
+|    8 | BC   |                                                                                                                        |
+|    9 | A    | C                                                                                                                      |
+|   10 | B    |                                                                                                                        |
+|   11 | AC   | BC                                                                                                                     |
+|   12 | AC   | ACD                                                                                                                    |
+|   13 | C    |                                                                                                                        |
+|   14 | A    | B                                                                                                                      |
+|   15 | D    | A                                                                                                                      |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|  Ch9 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | A    |                                                                                                                        |
+|    2 | ABC  | B                                                                                                                      |
+|    3 | BD   |                                                                                                                        |
+|    4 | B    |                                                                                                                        |
+|    5 | BD   |                                                                                                                        |
+|    6 | A    |                                                                                                                        |
+|    7 | D    | C                                                                                                                      |
+|    8 | D    |                                                                                                                        |
+|    9 | C    | AC                                                                                                                     |
+|   10 | D    |                                                                                                                        |
+|   11 | BCD  | ABC                                                                                                                    |
+|      |      |                                                                                                                        |
+|      |      |                                                                                                                        |
+|      |      |                                                                                                                        |
+|      |      |                                                                                                                        |
+|   12 | D    | A                                                                                                                      |
+|   13 |      | D                                                                                                                      |
+|   14 | D    | A                                                                                                                      |
+|   15 | AB   |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+| Ch10 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | ABCD | A                                                                                                                      |
+|    2 | D    | A                                                                                                                      |
+|    3 | A    |                                                                                                                        |
+|    4 | D    |                                                                                                                        |
+|    5 | C    |                                                                                                                        |
+|    6 | D    |                                                                                                                        |
+|    7 | B    |                                                                                                                        |
+|    8 | B    |                                                                                                                        |
+|    9 | AB   | B                                                                                                                      |
+|   10 | B    |                                                                                                                        |
+|   11 | D    |                                                                                                                        |
+|   12 | C    |                                                                                                                        |
+|   13 | B    | A                                                                                                                      |
+|      |      | A private synonym is not automatically available to any user in the database,                                          |
+|      |      | but the owner of the private synonym reserves the right to grant privileges on that synonym to anyone in the database. |
+|      |      |                                                                                                                        |
+|   14 | D    | B                                                                                                                      |
+|   15 | C    |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+| Ch11 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | AD   | AB                                                                                                                     |
+|    2 | BC   |                                                                                                                        |
+|    3 | C    |                                                                                                                        |
+|    4 | B    |                                                                                                                        |
+|    5 | D    |                                                                                                                        |
+|    6 | D    |                                                                                                                        |
+|    7 | C    |                                                                                                                        |
+|    8 | D    |                                                                                                                        |
+|    9 | C    |                                                                                                                        |
+|   10 | D    |                                                                                                                        |
+|   11 | C    |                                                                                                                        |
+|   12 | B    |                                                                                                                        |
+|   13 |      |                                                                                                                        |
+|   14 |      |                                                                                                                        |
+|   15 |      |                                                                                                                        |
+|      |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+| Ch12 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 | B    |                                                                                                                        |
+|    2 | C    |                                                                                                                        |
+|    3 | C    |                                                                                                                        |
+|    4 | A    |                                                                                                                        |
+|    5 | C    |                                                                                                                        |
+|    6 | A    |                                                                                                                        |
+|    7 | B    |                                                                                                                        |
+|    8 | A    |                                                                                                                        |
+|    9 | D    |                                                                                                                        |
+|   10 | A    |                                                                                                                        |
+|   11 | D    |                                                                                                                        |
+|   12 | BD   |                                                                                                                        |
+|   13 | AC   |                                                                                                                        |
+|   14 | B    |                                                                                                                        |
+|   15 | BD   | CD                                                                                                                     |
+|      |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+| Ch13 |      |                                                                                                                        |
+|------+------+------------------------------------------------------------------------------------------------------------------------|
+|    1 |      |                                                                                                                        |
+
 
 
 ** Notes for Exam
@@ -201,3 +261,150 @@
   temporary table or inline view).
 
 *** Chapter 10: Creating Ohter Schema Objects
+
+**** Create and Use Simple and Complex Views
+
+**** Create, Maintain, and Use Sequence
++ You cannot invoke CURRVAL in your first reference to a sequence
+  within a given session. NEXTVAL must be the first reference.
++ If you attempt to execute a statement, such as an INSERT, that
+  includes the sequence reference NEXTVAL, the sequence generator will
+  advance to the next number even if the INSERT statement fails.
++ You cannot invoke CURRVAL or NEXTVAL in the DEFAULT clause of a
+  CREATE TABLE or ALTER TABLE statement.
++ You cannot invoke CURRVAL or NEXTVAL in the subquery of a CREATE
+  VIEW statement, nor of a SELECT, UPDATE, or DELETE statement.
++ In a SELECT statement, you cannot combine CURRVAL or NEXTVAL with a
+  DISTINCT operator.
++ You cannot invoke CURRVAL or NEXTVAL in the WHERE clause of a SELECT
+  statement.
++ You cannot use CURRVAL or NEXTVAL in a CHECK constraint.
++ You cannot combine CURRVAL or NEXTVAL with the set operators UNION, INTERSECT, or MINUS.
++ You can call a sequence pseudocolumn from anywhere within a SQL
+  statement that you can use any expression.
+
+**** Create and Maintain Indexes
++ An INDEX is an object you can create in the database that supports
+  faster queries on tables. For a given table, the INDEX stores a set
+  of presorted data from one or more columns that you designate. Also
+  stored in the INDEX is the address of data from the source table.
++ SQL can use the INDEX object to speed up querying of WHERE and ORDER
+  BY clauses.
++ If a PRIMARY KEY or UNIQUE constraint created, SQL will
+  automatically create an index to support that constraint on the
+  column or columns.
++ Single-column, composite and unique index
+
+**** Create Private and Public Synonyms
+
+*** Manage Schema Objects
+
+**** Add and Modify Columns
++ ALTER TABLE statement is a DDL statement => implicit commit
+
+**** Adding Constraints
+
+**** Create Indexes Using the CREATE TABLE statement
+
+**** Perform FLASHBACK operations
+
+*** Set Operators
+
++ Rules for SELECT statement to combine:
+  + number of expressions selected in the select list must be
+    identical.
+  + the datatypes of each expression mush match
+  + Large datatypes such as BLOB and CLOB cannot be used
+  + The ORDER BY clause cannot be included in the SELECT statements—
+    except for the final SELECT statement.
+
+*** Generating Reports by Grouping Related Data
+
+**** Use ROLLUP Operation to Produce Subtotal Values
+
++ ROLLUP returns a single summary row for each grouped set of records
+  within a SELECT statement that uses the GROUP BY clause.
+
++ For every n groups, ROLL UP produces n+1 groupings
+
+**** Use the CUBE operation to produce Crosstabulation Values
+
++ CUBE is something of a three-dimensional ROLLUP. 
++ For n expressions, CUBE returns 2 to nth power groupings
+
+**** Use the GROUPING function to identify the row values created by ROLLUP or CUBE
+
++ it differentates betweeen regular rows and superaggregate rows.
+
+**** Use GROUPING SETS to produce a single result set
+
+** Topics need to be reviewed
+
+*** Using DDL to Create and Manage Tables
++ CREATE TABLE
++ ALTER TABLE
+  + table level vs row level
+  + add constraint: primary key using existing unique index 
+
+
+*** Controlling User Acess
++ CANNOT combine system privileges and objects privileges in a single
+  GRANT statement
+
+
+*** Managing Schema Objects
+
+**** Perform FLASHBACK operation
+
+**** Create Indexes
+
+**** External Tables
++ Only SELECT, no other DML
++ No index can be used
+
+*** Manipulating Data
+
+**** Control Transactions
+
+***** SAVEPOINT and ROLLBACK 
++ when a commit issued (explicitly or implicitly), ALL save points will
+be erased from memory, any references to save points will produce
+errors
+
+
+
+*** Manipulating Large Set of Data
+
+**** Track the Change of data over period of time
++ versions_operation
++ versions_endtime
+
+**** MERGE statement 
+DML
+
+*** Managing Objects with Data Dictionary Views
+
+**** Query various data dictionary views
+
+*** Set Operators
+
+**** UNION
++ ORDER BY can only be used at the end of last statement
+
+*** Create Other Schema Objects
+
+**** Views
+
+
+
+
+
+
+** Questions To Be Reviewed
+
+*** 30
+*** 40
+*** 45
+*** 
+
+
