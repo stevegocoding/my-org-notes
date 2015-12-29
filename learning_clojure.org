@@ -1,0 +1,78 @@
+* Learning Clojure
+** Core Concept
+
+
+*** Reducers and Transducers
+
+- Reducing Function
+
+The kind of functions you'd pass to 'reduce' - it takes 2 args: the
+result so far and a new input.
+
+;;reducing function signature
+whatever, input -> whatever
+
+
+- Reducing Function Transformer (Transducer)
+
+The kind of functions that takes a reducing function and returns
+another one.
+
+;;transducer signature
+(whatever, input -> whatever) -> (whatever, input -> whatever)
+
+#+BEGIN_SRC emacs-lisp
+  (defn mapping [f]
+    (fn [f1]
+      (fn [result input]
+        (f1 result (f input)))))
+
+  (defn filtering [pred]
+    (fn [f1]
+      (fn [result input]
+        (if (pred input)
+          (f1 result input)
+          result))))
+
+  (defn mapcatting [f]
+    (fn [f1]
+      (fn [result input]
+        (reduce f1 result (f input)))))
+#+END_SRC
+
+- Powers of Transducers
+  - The 'job' being done (what the reducing function does)
+  - The context of use
+  - The source of input
+
+
+- Compose Transducers
+#+BEGIN_SRC emacs-lisp
+  (comp (map double) (map inc))
+
+  (map inc) =>
+  (fn [f1]
+      (fn [result input]
+          (f1 result (inc input))))
+
+  (map double) =>
+  (fn [(map inc)]
+      (fn [result input]
+          ((map inc) result (double input)))))
+
+
+  (comp (map double) (map inc))
+
+  =>
+
+  (fn [result (double input)]
+      (f1 result (inc (double input))))   ; f1 is the reducing function when we call the composed function
+#+END_SRC
+
+-> double THEN inc
+
+
+
+
+
+
