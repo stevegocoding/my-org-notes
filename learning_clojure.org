@@ -1,8 +1,41 @@
 * Learning Clojure
+
 ** Core Concept
 
+*** TODO Reader
 
-*** Reducers and Transducers
+*** TODO The REPL and main
+
+*** TODO Evaluation
+
+*** TODO Special forms
+
+*** TODO Data Structures
+
+*** TODO Sequences
+
+*** TODO Transient Data Structures
+
+*** TODO Multimethods and Hierarchies
+
+*** TODO Namespaces
+
+*** Mutability
+
+**** Atom
+
+**** Refs and Transactions
+
+**** Agents
+
+
+*** Protocols
+
+*** Datatypes - deftype, defrecord and reify
+
+*** Reducers
+
+*** Transducers
 
 - Reducing Function
 
@@ -66,13 +99,30 @@ another one.
   =>
 
   (fn [result (double input)]
-      (f1 result (inc (double input))))   ; f1 is the reducing function when we call the composed function
+      (f1 result (inc (double input))))   ; f1 is the reducing function (like conj or '+')  when we call the composed function
 #+END_SRC
 
 -> double THEN inc
 
 
+**** Transducers in core.async
 
+*** Java Interop
 
+*** Compilation and Class Generation
 
+**** On-the-fly Compilation
+
+**** Ahead-of-time Compilation
+
+- To deliver your application without source
+- To speed up application startup
+- To generate named classes for use by Java
+- To create an application that does not need runtime bytecode generation and custom classloaders
+
+**** Extending/Implementing Java Classes
+
+- proxy
+- reify
+- gen-class
 
